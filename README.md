@@ -1,59 +1,199 @@
-# AngularAuthSystem
+# 🔐 User Authentication Demo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
+![Angular](https://img.shields.io/badge/Angular-17-red)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
+![Frontend](https://img.shields.io/badge/Frontend-SPA-orange)
+![Authentication](https://img.shields.io/badge/Auth-localStorage-green)
 
-## Development server
+A frontend-only authentication application built using **Angular 17** that demonstrates **routing, route guards, reactive forms, and localStorage-based authentication**.
 
-To start a local development server, run:
+---
 
+## 💡 Concepts Demonstrated
+
+This project showcases modern Angular concepts including:
+
+* Angular 17 architecture
+* Angular Router
+* SPA(Single Page Application) routing
+* Authentication flow
+* Reactive forms
+* Route guards
+* State persistence
+* Component interaction
+* Frontend application structure
+* Form Validation
+
+---
+
+## 📌 Features
+
+* User Registration
+* User Login
+* Protected Dashboard Route
+* Route Guard Authentication
+* Logout Functionality
+* Reactive Form Validation
+* Persistent Login using localStorage
+* Responsive UI Design
+* Angular Standalone Components
+* Clean Folder Structure
+
+---
+
+## 🚀 Tech Stack
+
+* Angular 17
+* TypeScript
+* Angular Router
+* Reactive Forms
+* HTML5
+* CSS3
+* localStorage API
+
+---
+
+## 🗂️ Project Structure
+
+```text
+src/app/
+│
+├── components/
+│   └── navbar/
+│
+├── pages/
+│   ├── login/
+│   ├── register/
+│   └── dashboard/
+│
+├── services/
+│   └── auth.ts
+│
+├── guards/
+│   └── auth-guard.ts
+│
+├── app.routes.ts
+│
+└── app.html
+```
+
+---
+
+## ⚙️ Authentication Flow
+
+### Registration
+
+- User enters:
+    - First Name
+    - Last Name
+    - Username
+    - Password
+- Data is stored in browser localStorage
+
+---
+
+### Login
+
+- Credentials are validated against stored localStorage data
+- Successful login stores authentication state
+- Dashboard Protection
+- Dashboard route is protected using Angular Route Guards
+- Unauthorized users are redirected to Login page
+
+---
+
+## 🔧 Installation & Setup
+
+### Clone Repository
+```bash
+git clone <your-repository-url>
+```
+### Install Dependencies
+```bash
+npm install
+```
+### Run Application
 ```bash
 ng serve
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+### Open browser:
+```text
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
+## 🌐 Application Routes
+
+|Route|Description|
+|-----|-----------|
+|/login|User login page|
+|/register|User registration page|
+|/dashboard|Protected dashboard page|
+
+---
+
+## 📌 Sample Authentication Data
+
+### Registration Example
+```json
+{
+  "firstName": "Zoro",
+  "lastName": "Roronoa",
+  "username": "PirateHunter",
+  "password": "Swords@3"
+}
 ```
+---
 
-## Building
+## 🧠 Key Angular Concepts Used
 
-To build the project run:
+### 1. Standalone Components
 
-```bash
-ng build
+Uses Angular 17 standalone component architecture instead of NgModules.
+
+### 2. Reactive Forms
+
+Implemented using:
+```TypeScript
+ReactiveFormsModule
 ```
+Provides:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Form validation
+- Better form state management
+- Cleaner form handling
 
-## Running unit tests
+### 3. Route Guards
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+Protected routes using:
+```Typecript
+CanActivateFn
 ```
+Ensures unauthorized users cannot access dashboard routes.
 
-## Running end-to-end tests
+### 4. localStorage Authentication
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+Authentication state is stored using browser localStorage:
+```Typecript
+localStorage.setItem(...)
 ```
+Used for:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- User persistence
+- Session simulation
+- Authentication state tracking
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📮 Testing
+
+You can test the application by:
+
+* Registering a user
+* Logging in with credentials
+* Accessing protected dashboard
+* Logging out
+* Trying direct dashboard access without login
+
+---
