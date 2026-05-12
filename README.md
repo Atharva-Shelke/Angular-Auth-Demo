@@ -26,7 +26,7 @@ This project showcases modern Angular concepts including:
 
 ---
 
-## 📌 Features
+## ✨ Features
 
 * User Registration
 * User Login
